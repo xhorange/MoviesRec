@@ -1,11 +1,18 @@
 package njupt.orange.movies_rec.Entity;
 
-import javax.persistence.Entity;
+
+import javax.persistence.*;
 
 @Entity
-public class User {
+@Table(name = "user")
+public class UserEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "user_id")
     private int userId;
+    @Column(name = "user_name")
     private String userName;
+    @Column(name = "passwd")
     private String passwd;
 
     public int getUserId() {
