@@ -34,9 +34,7 @@
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                   aria-expanded="false" th:if="${name} ne 'null'?'未登录':${name}">
-                    未登录
-                </a>
+                   aria-expanded="false" th:text="${name}?${name}:'未登录'">用户</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="#">历史记录</a>
                     <a class="dropdown-item" href="#">收藏影片</a>
@@ -153,7 +151,7 @@
                 </div>
             </div>
             <div style="margin-top: 20px">
-                <h3><a class="badge badge-info">为您推荐</a></h3>
+                <h3><a class="badge badge-info">猜您喜欢</a></h3>
                 <div class="card-deck">
                     <div class="card">
                         <img class="card-img-bottom" src="/movies_poster/74.jpg" alt="Card image cap">
